@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.container {
+    width: 40%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    /* justify-content: center;
+    text-align: center; */
+}
+
+.header {
+    display: flex;
+    text-align: center;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.inputsection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+.taskinput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+/* .taskinput:hover{
+    box-shadow: dimgrey 0px 0px 8px 0px;
+    outline: none;
+} */
+.addbtn {
+
+    border-radius: 8px;
+    padding: 16px 50px;
+    border: none;
+    outline: none;
+    background: #ff5945;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.addbtn:hover {
+    background-color: rgb(95, 93, 93);
+    transition: 0.5s;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    /* cursor: pointer; */
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background-image: url(circle.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.jpg);
+}
+
+li {
+    position: relative;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    transition: 0.5s;
+
+}
+
+.edit-icon {
+    margin-left: 10px;
+    position: absolute;
+    right: 40px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.delete-icon {
+    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* پنجره ادیت تسک */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    background: rgba(0,0,0,0.3); 
+    backdrop-filter: blur(4px);   
+}
+
+.popup-box {
+    width: 360px;
+    background: white;
+    padding: 26px;
+    margin: 163px auto;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.popup-box input {
+    width: 90%;
+    height: 20px;
+    padding: 16px;
+    /* display: flex; */
+    background: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 19px;
+    /* margin: 0 10px 24px 10px; */
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+.popup-btns {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+}
+
+.popup-btns button{
+    border-radius: 10px;
+    border-radius: 18px;
+    border: none;
+    padding: 8px 20px;
+    outline: none;
+    background: #ff5945;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.popup-btns  button:hover{
+    background-color: rgb(95, 93, 93);
+    transition: 0.5s;
+}
+/* پنجره ادیت تسک */
